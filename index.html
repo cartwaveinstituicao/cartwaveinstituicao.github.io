@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARTWAVE - Instituição de Pagamento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navbar -->
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-2xl">C</div>
+                <div>
+                    <span class="font-bold text-2xl tracking-tight">CARTWAVE</span>
+                    <p class="text-xs text-gray-500 -mt-1">Instituição de Pagamento</p>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#sobre" class="nav-link text-gray-600 hover:text-blue-600">Sobre</a>
+                <a href="#servicos" class="nav-link text-gray-600 hover:text-blue-600">Serviços</a>
+                <a href="#contato" class="nav-link text-gray-600 hover:text-blue-600">Contato</a>
+            </div>
+            
+            <button onclick="document.getElementById('contato').scrollIntoView({ behavior: 'smooth' })" 
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-xl text-sm font-semibold transition-colors">
+                Fale Conosco
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-bg text-white py-24">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+                    Soluções financeiras<br>modernas para seu negócio
+                </h1>
+                <p class="text-xl text-blue-100 mb-10">
+                    CARTWAVE Instituição de Pagamento LTDA - Tecnologia, cobrança, cartões e muito mais.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="document.getElementById('contato').scrollIntoView({ behavior: 'smooth' })" 
+                            class="bg-white text-blue-700 hover:bg-blue-50 px-8 py-4 rounded-2xl font-semibold text-lg flex items-center justify-center gap-3 mx-auto sm:mx-0">
+                        <i class="fas fa-paper-plane"></i>
+                        Entrar em contato
+                    </button>
+                    <a href="#servicos" 
+                       class="border border-white/70 hover:bg-white/10 px-8 py-4 rounded-2xl font-semibold text-lg flex items-center justify-center gap-3">
+                        Conheça nossos serviços
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">Quem somos</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        A <strong>CARTWAVE Instituição de Pagamento LTDA</strong> é uma empresa especializada em soluções financeiras e tecnológicas. 
+                        Atuamos com transparência, segurança e inovação para atender empresas de todos os tamanhos.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 flex-shrink-0">
+                                <i class="fas fa-shield-alt text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Segurança em primeiro lugar</h4>
+                                <p class="text-gray-600">Seus dados e transações protegidos com tecnologia de ponta.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 flex-shrink-0">
+                                <i class="fas fa-chart-line text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Inovação constante</h4>
+                                <p class="text-gray-600">Desenvolvemos soluções customizadas para seu negócio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-3xl">
+                    <h3 class="font-semibold text-lg mb-6">Dados da Empresa</h3>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex justify-between py-3 border-b">
+                            <span class="text-gray-500">CNPJ</span>
+                            <span class="font-medium">33.207.641/0001-70</span>
+                        </div>
+                        <div class="flex justify-between py-3 border-b">
+                            <span class="text-gray-500">Endereço</span>
+                            <span class="text-right">Av. Napoli, 500 - Sala 1204<br>Res. Eldorado - Goiânia, GO<br>CEP 74.367-640</span>
+                        </div>
+                        <div class="flex justify-between py-3 border-b">
+                            <span class="text-gray-500">Telefone</span>
+                            <span class="font-medium">(62) 9999-9999</span>
+                        </div>
+                        <div class="flex justify-between py-3">
+                            <span class="text-gray-500">E-mail</span>
+                            <span class="font-medium">email@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-blue-100 text-blue-700 text-sm font-medium px-4 py-2 rounded-full mb-4">NOSSA ATUAÇÃO</span>
+                <h2 class="text-4xl font-bold mb-4">Nossos Serviços</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Oferecemos uma ampla gama de serviços financeiros, tecnológicos e de suporte empresarial.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Serviço 1 -->
+                <div class="service-card bg-white p-8 rounded-3xl border border-gray-100">
+                    <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 mb-6">
+                        <i class="fas fa-credit-card text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-3">Administração de Cartões</h3>
+                    <p class="text-gray-600">Administração de cartões de crédito e débito com tecnologia avançada.</p>
+                </div>
+                
+                <!-- Serviço 2 -->
+                <div class="service-card bg-white p-8 rounded-3xl border border-gray-100">
+                    <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 mb-6">
+                        <i class="fas fa-handshake text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-3">Cobrança e Intermediação</h3>
+                    <p class="text-gray-600">Atividades de cobranças, informações cadastrais e intermediação de serviços financeiros.</p>
+                </div>
+                
+                <!-- Serviço 3 -->
+                <div class="service-card bg-white p-8 rounded-3xl border border-gray-100">
+                    <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 mb-6">
+                        <i class="fas fa-code text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-3">Desenvolvimento de Software</h3>
+                    <p class="text-gray-600">Desenvolvimento sob encomenda, customizáveis e não customizáveis. Consultoria em TI e suporte técnico.</p>
+                </div>
+                
+                <!-- Serviço 4 -->
+                <div class="service-card bg-white p-8 rounded-3xl border border-gray-100">
+                    <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 mb-6">
+                        <i class="fas fa-globe text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-3">Soluções Digitais</h3>
+                    <p class="text-gray-600">Tratamento de dados, hospedagem, portais e serviços de informação na internet.</p>
+                </div>
+                
+                <!-- Serviço 5 -->
+                <div class="service-card bg-white p-8 rounded-3xl border border-gray-100">
+                    <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 mb-6">
+                        <i class="fas fa-building text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-3">Serviços Administrativos</h3>
+                    <p class="text-gray-600">Aluguel de máquinas, serviços combinados de escritório e apoio administrativo.</p>
+                </div>
+                
+                <!-- Serviço 6 -->
+                <div class="service-card bg-white p-8 rounded-3xl border border-gray-100">
+                    <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 mb-6">
+                        <i class="fas fa-chalkboard-teacher text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-3">Educação e Treinamento</h3>
+                    <p class="text-gray-600">Atividades de apoio à educação e treinamento em desenvolvimento profissional.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white p-8 rounded-3xl border border-gray-100 text-sm">
+                <h4 class="font-semibold mb-4 text-lg">Outros serviços oferecidos:</h4>
+                <ul class="grid md:grid-cols-2 gap-x-8 gap-y-2 text-gray-600 list-disc pl-5">
+                    <li>Representantes comerciais e agentes do comércio</li>
+                    <li>Comércio varejista de livros</li>
+                    <li>Correspondentes de instituições financeiras</li>
+                    <li>Operadoras de cartões de débito</li>
+                    <li>Atividades auxiliares dos serviços financeiros</li>
+                    <li>Intermediação e agenciamento de serviços</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Entre em contato</h2>
+                <p class="text-gray-600">Estamos prontos para atender sua empresa.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl text-blue-600 flex-shrink-0">📍</div>
+                            <div>
+                                <p class="font-semibold">Endereço</p>
+                                <p class="text-gray-600">Av. Napoli, 500 - Quadra QC01 Lote Area<br>Sala 1204 - Res. Eldorado<br>Goiânia - GO, CEP 74.367-640</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl text-blue-600 flex-shrink-0">📞</div>
+                            <div>
+                                <p class="font-semibold">Telefone</p>
+                                <p class="text-gray-600">(62) 9999-9999</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl text-blue-600 flex-shrink-0">✉️</div>
+                            <div>
+                                <p class="font-semibold">E-mail</p>
+                                <p class="text-gray-600">email@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-3xl">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Seu nome</label>
+                            <input type="text" id="nome" required
+                                   class="w-full px-5 py-3 rounded-2xl border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                                <input type="email" id="email" required
+                                       class="w-full px-5 py-3 rounded-2xl border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
+                                <input type="tel" id="telefone"
+                                       class="w-full px-5 py-3 rounded-2xl border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
+                            <textarea id="mensagem" rows="5" required
+                                      class="w-full px-5 py-3 rounded-3xl border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none resize-none"></textarea>
+                        </div>
+                        <button type="submit"
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-semibold transition-colors">
+                            Enviar mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Política de Privacidade -->
+    <section class="py-20 bg-gray-50 border-t">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 text-center">Política de Privacidade</h2>
+            <div class="prose prose-gray max-w-none text-sm leading-relaxed">
+                <p class="mb-6">Última atualização: Junho de 2026</p>
+                
+                <h3 class="text-xl font-semibold mt-10 mb-4">1. Coleta de Dados</h3>
+                <p>Coletamos apenas os dados necessários para a prestação de nossos serviços: nome, e-mail, telefone, dados de contato e informações relacionadas à operação financeira.</p>
+                
+                <h3 class="text-xl font-semibold mt-10 mb-4">2. Uso dos Dados</h3>
+                <p>Utilizamos seus dados para:</p>
+                <ul class="list-disc pl-6 space-y-2 mt-3">
+                    <li>Processar transações e cobranças</li>
+                    <li>Prestar suporte técnico</li>
+                    <li>Cumprir obrigações legais</li>
+                    <li>Melhorar nossos serviços</li>
+                </ul>
+                
+                <h3 class="text-xl font-semibold mt-10 mb-4">3. Compartilhamento</h3>
+                <p>Não vendemos seus dados. Compartilhamos apenas com parceiros necessários para a execução dos serviços, sempre com rigorosos contratos de proteção.</p>
+                
+                <h3 class="text-xl font-semibold mt-10 mb-4">4. Seus Direitos</h3>
+                <p>Você tem direito a acessar, corrigir, excluir ou solicitar portabilidade dos seus dados. Para exercer esses direitos, entre em contato conosco.</p>
+                
+                <div class="bg-white p-6 rounded-2xl mt-12 border">
+                    <p class="text-center text-gray-500">CARTWAVE Instituição de Pagamento LTDA - CNPJ 33.207.641/0001-70</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-9 h-9 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-bold">C</div>
+                        <span class="text-white text-2xl font-bold">CARTWAVE</span>
+                    </div>
+                    <p class="text-sm">Soluções financeiras e tecnológicas com excelência.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-medium mb-6">Links Rápidos</h4>
+                    <div class="space-y-3 text-sm">
+                        <a href="#sobre" class="block hover:text-white transition-colors">Sobre Nós</a>
+                        <a href="#servicos" class="block hover:text-white transition-colors">Serviços</a>
+                        <a href="#" onclick="showPrivacyModal()" class="block hover:text-white transition-colors">Política de Privacidade</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-medium mb-6">Contato</h4>
+                    <div class="space-y-3 text-sm">
+                        <p>(62) 9999-9999</p>
+                        <p>email@gmail.com</p>
+                        <p>Goiânia - GO</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-8 text-xs flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>© 2026 CARTWAVE Instituição de Pagamento LTDA. Todos os direitos reservados.</p>
+                <p>CNPJ: 33.207.641/0001-70</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Política -->
+    <div id="privacyModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[100] p-6">
+        <div class="bg-white max-w-2xl w-full max-h-[90vh] overflow-auto rounded-3xl">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-2xl font-bold">Política de Privacidade</h2>
+                    <button onclick="hidePrivacyModal()" class="text-3xl leading-none text-gray-400 hover:text-gray-600">×</button>
+                </div>
+                <!-- Conteúdo da política (mesmo do rodapé) -->
+                <div class="prose prose-sm max-w-none">
+                    <p>Esta Política de Privacidade descreve como a CARTWAVE Instituição de Pagamento LTDA coleta, utiliza e protege suas informações.</p>
+                    <!-- Repetir conteúdo resumido -->
+                    <p class="mt-8 text-center text-xs text-gray-500">Para a versão completa, entre em contato conosco.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tailwind script already loaded via CDN
+        
+        // Form submission simulation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            this.reset();
+        });
+        
+        // Modal functions
+        function showPrivacyModal() {
+            document.getElementById('privacyModal').classList.remove('hidden');
+            document.getElementById('privacyModal').classList.add('flex');
+        }
+        
+        function hidePrivacyModal() {
+            document.getElementById('privacyModal').classList.add('hidden');
+            document.getElementById('privacyModal').classList.remove('flex');
+        }
+        
+        // Close modal on outside click
+        document.getElementById('privacyModal').addEventListener('click', function(e) {
+            if (e.target === this) hidePrivacyModal();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Keyboard escape for modal
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") {
+                const modal = document.getElementById('privacyModal');
+                if (!modal.classList.contains('hidden')) hidePrivacyModal();
+            }
+        });
+    </script>
+</body>
+</html>
